@@ -3549,6 +3549,11 @@ expo-file-system@~19.0.16:
   resolved "https://registry.npmjs.org/expo-file-system/-/expo-file-system-19.0.16.tgz"
   integrity sha512-9Ee6HpcUEfO7dOet/on9yAg7ysegBua35Q0oGrJzoRc+xW6IlTxoSFbmK8QhjA3MZpkukP3DhaiYENYOzkw9SQ==
 
+expo-file-system@~19.0.17:
+  version "19.0.17"
+  resolved "https://registry.yarnpkg.com/expo-file-system/-/expo-file-system-19.0.17.tgz#2555c05c26a19038d005f281b11dbda9722d0c0d"
+  integrity sha512-WwaS01SUFrxBnExn87pg0sCTJjZpf2KAOzfImG0o8yhkU7fbYpihpl/oocXBEsNbj58a8hVt1Y4CVV5c1tzu/g==
+
 expo-font@~14.0.8:
   version "14.0.8"
   resolved "https://registry.npmjs.org/expo-font/-/expo-font-14.0.8.tgz"
@@ -3560,6 +3565,18 @@ expo-haptics@~15.0.7:
   version "15.0.7"
   resolved "https://registry.yarnpkg.com/expo-haptics/-/expo-haptics-15.0.7.tgz#384bb873d7eca7b141f85e4f300b75eab68ebfe9"
   integrity sha512-7flWsYPrwjJxZ8x82RiJtzsnk1Xp9ahnbd9PhCy3NnsemyMApoWIEUr4waPqFr80DtiLZfhD9VMLL1CKa8AImQ==
+
+expo-image-loader@~6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/expo-image-loader/-/expo-image-loader-6.0.0.tgz#15230442cbb90e101c080a4c81e37d974e43e072"
+  integrity sha512-nKs/xnOGw6ACb4g26xceBD57FKLFkSwEUTDXEDF3Gtcu3MqF3ZIYd3YM+sSb1/z9AKV1dYT7rMSGVNgsveXLIQ==
+
+expo-image-picker@~17.0.8:
+  version "17.0.8"
+  resolved "https://registry.yarnpkg.com/expo-image-picker/-/expo-image-picker-17.0.8.tgz#c4430994de81f3e9995c9ce77cb76403213b17d7"
+  integrity sha512-489ByhVs2XPoAu9zodivAKLv7hG4S/FOe8hO/C2U6jVxmRjpAKakKNjMml0IwWjf1+c/RYBqm1XxKaZ+vq/fDQ==
+  dependencies:
+    expo-image-loader "~6.0.0"
 
 expo-keep-awake@~15.0.7:
   version "15.0.7"
