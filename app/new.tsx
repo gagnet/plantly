@@ -54,7 +54,8 @@ export default function NewScreen() {
     }
 
     const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      //mediaTypes: ImagePicker.MediaTypeOptions.Images is what she used, this is from the docs 
+      mediaTypes: ["images"],
       allowsEditing: true,
       aspect: [1,1],
       quality: 1,
