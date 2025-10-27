@@ -9,7 +9,7 @@ export default function Layout(){
             <Stack.Screen name="index" options={{
                 title: "Home", headerRight: ()=>(
             <Link href="/new" asChild>
-            <Pressable hitSlop={20}>
+            <Pressable hitSlop={20} style={{marginHorizontal: 6}}>
               <Entypo name="circle-with-plus" size={24} 
               color={theme.colorGreen} />
               </Pressable>

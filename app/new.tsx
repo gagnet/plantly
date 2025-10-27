@@ -14,7 +14,8 @@ import { PlantlyImage } from "@/components/PlantlyImage";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { usePlantStore } from "@/store/plantsStore";
 import { useRouter } from "expo-router";
-import * as ImagePicker from "expo-image-picker"
+import { launchImageLibraryAsync } from "expo-image-picker";
+
 
 export default function NewScreen() {
   const [imageUri, setImageUri] = useState<string>()
@@ -53,7 +54,7 @@ export default function NewScreen() {
       return
     }
 
-    const result = await ImagePicker.launchImageLibraryAsync({
+    const result = await launchImageLibraryAsync({
       //mediaTypes: ImagePicker.MediaTypeOptions.Images is what she used, this is from the docs 
       mediaTypes: ["images"],
       allowsEditing: true,

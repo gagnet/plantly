@@ -1,8 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import * as FileSystem from "expo-file-system"
-import { File, Directory, Paths } from 'expo-file-system';
+import { File, Paths } from "expo-file-system";
 
 
 export type PlantType = {
@@ -35,17 +34,14 @@ export const usePlantStore = create(
         wateringFrequencyDays: number,
         imageUri?: string,
       ) => {
-        const savedImageUri =
-          FileSystem.Directory +
-          `${new Date().getTime()}-${imageUri?.split("/").slice(-1)[0]}`;
+       const fileName = `${new Date().getTime()}-${imageUri?.split("/").slice(-1)[0]}`;
+        const destinationFile = new File(Paths.document, fileName);
 
         if (imageUri) {
           //await FileSystem.copyAsync({ is what would give us an error
           
-          await({
-            from: imageUri,
-            to: savedImageUri,
-          });
+       const sourceFile = new File(imageUri);
+          sourceFile.copy(destinationFile);
         }
         return set((state) => {
           return {
@@ -56,7 +52,7 @@ export const usePlantStore = create(
                 id: String(state.nextId),
                 name,
                 wateringFrequencyDays,
-                imageUri: imageUri ? savedImageUri : undefined,
+                imageUri: imageUri ? destinationFile.uri : undefined,
               },
               ...state.plants,
             ],
